@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
 html, body {
     height: 100%;
     margin: 0;
+    font-family: 'Open Sans';
+    font-weight: 900;
 }
 
 .container {
@@ -8,16 +12,64 @@ html, body {
     grid-template-columns: 1fr 4fr;
 }
 
-header > * {
-    border: 1px solid red;
-}
-
 header {
-    background-color: gray;
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    padding-left: 20px;
 }
+
+#input-search {
+    height: 30%;
+    width:  80%;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
+}
+
+#icon-search {
+    margin: 0 10px;
+}
+
+#icon-notifications {
+    align-self: start;
+}
+
+.profile-picture {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    margin: 5px 10px;
+}
+
+.header-container {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.icon {
+    height: auto;
+    width: 30px;
+}
+
+nav .nav-item {
+    margin: 15px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: white;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+span {
+    font-size: 1.5em;
+}
+
 aside {
     background-color: blue;
     grid-row: 1 / 3;
