@@ -8,9 +8,15 @@ html, body {
     grid-template-columns: 1fr 4fr;
 }
 
+header > * {
+    border: 1px solid red;
+}
+
 header {
     background-color: gray;
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 aside {
     background-color: blue;
