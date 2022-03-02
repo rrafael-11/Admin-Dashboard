@@ -11,8 +11,10 @@ html, body {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 8fr;
 }
+
+/* Header */
 
 header {
     grid-column: 2 / 3;
@@ -24,17 +26,13 @@ header {
 #input-search {
     height: 30px;
     width:  80%;
-    border-radius: 10px;
+    border-radius: 20px;
     outline: none;
     border: 1px solid black;
 }
 
 #icon-search {
     margin: 0 10px;
-}
-
-#icon-notifications {
-    align-self: start;
 }
 
 .profile-picture {
@@ -64,13 +62,15 @@ nav .nav-item {
 }
 
 p {
-    font-size: 1em;
+    padding-left: 10px;
     font-weight: 600;
 }
 
-span {
+.bigger-text {
     font-size: 1.5em;
 }
+
+/* Sidebar */
 
 aside {
     background-color: lightgreen;
@@ -102,6 +102,58 @@ li {
     margin-left: 10px;
 }
 
+/* Main */
+
 main {
-    background-color: hsl(0, 0%, 85%);
+    background-color: #d9d9d9;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.projects {
+    grid-row: 1 / 3;
+    padding: 0 10px;
+}
+
+main > * {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid salmon;
+}
+
+.projects-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.projects-item {
+    height: 120px;
+}
+
+.announcements-container {
+    height: 100%;
+    border: 1px solid yellow;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(3fr, 60px));
+}
+
+.trending-container {
+    height: 100%;
+    border: 1px solid yellow;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(3fr, 45px));
+}
+
+.announcements-container > * {
+    border: 1px solid blue;
+}
+
+.projects-container > * {
+    border: 1px solid red;
+}
+
+
+.trending-container > * {
+    border: 1px solid green;
 }
